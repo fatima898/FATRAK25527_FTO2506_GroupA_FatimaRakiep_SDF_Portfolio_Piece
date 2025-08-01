@@ -1,0 +1,238 @@
+ /* add layout styling and font*/
+ /* blue color - #659f8f
+    orange color - #d86943 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif; 
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  background-image: url(./images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#desktop {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-attachment: grey;
+  display: flex;
+  flex-direction: column 2;
+  gap: 0.5rem; 
+}
+
+/* -- profile --*/
+.profile-section {
+  display: flex;
+  flex-wrap: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile-section img {
+  width: 240px;
+  height: 240px;
+}
+
+/* -- skills and proficiency grid -- */
+.skills-proficiency {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+/* -- skill bar -- */
+.skill-bar {
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+
+/* section + card styling */
+section {
+  background-color: #ffffff;
+  border-radius: 2rem;
+  color: #000000;
+  padding: 2rem;
+  margin: 4px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.project-card,
+.education-item,
+.experience-item {
+  background-color: #d8e8d6;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  box-shadow: inset 0 0 0 1px #e5e7eb;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-card:hover,
+.education-item:hover,
+.experience-item:hover {
+  background-color: lightblue;
+  color: #ffffff;
+}
+
+.project-card:hover p,
+.education-item:hover p,
+.experience-item:hover p,
+.project-card:hover h3,
+.education-item:hover h3,
+.experience-item:hover h3,
+.project-card:hover li,
+.education-item:hover li,
+.experience-item:hover li {
+  color: gray;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.tool-logo {
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  color: #374151;
+}
+
+/* education + tools layout */
+.edu-tools-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.tools-stack {
+  display: flex;
+  flex-direction: column; /*--make row for mobile view--*/
+  align-items: center;
+  gap: 2rem;
+  background-color: ;
+}
+
+.tool-section {
+  width: 100%;
+  max-width: 300px; /* make skinny */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border: 2px;
+  margin: 0 auto; 
+  
+}
+
+.tool-heading-box {
+  background-color: black;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+footer {
+  color: white;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+footer h2 {
+  color: #fff;
+  text-align: start;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+footer a {
+  margin: 0 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Skills Tags */
+.flex.flex-wrap.gap-2 span {
+  background-color: #f3f4f6;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 14px;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 1024px) {
+  .skills-proficiency,
+  .edu-tools-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-section img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #desktop {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1.25rem;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  footer a {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+
+}
+<*-- not working  --*>
+@media (min-width: 768px) {
+    .tools-section .container {
+        gap: 29.04px;
+        justify-content: center;
+        margin-bottom: 45.63px;
+        grid-template-columns: repeat(3, 184px);
+    }
+
+}
+ 
+
+
+
+
